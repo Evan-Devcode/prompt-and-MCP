@@ -46,6 +46,62 @@
 
 要使用MCP服务器，您需要在配置文件中设置相应的服务器信息。典型的配置包括命令、参数、权限设置等。
 
+```
+# MacOS mcp配置文件格式
+
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+  "puppeteer": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+    }
+  }
+}
+```
+
+
+
+```
+# windows mcp配置文件格式
+
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+  "puppeteer": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "-y", 
+        "npx",
+        "@modelcontextprotocol/server-puppeteer"]
+    }
+  }
+}
+```
+
+
+
+
+
+
+
+
+
 ## 贡献
 
 欢迎贡献更多的MCP服务器资源或改进现有内容。请通过提交Pull Request或Issue来参与项目。
