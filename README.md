@@ -46,9 +46,9 @@
 
 要使用MCP服务器，您需要在配置文件中设置相应的服务器信息。典型的配置包括命令、参数、权限设置等。
 
-```
-# MacOS mcp配置文件格式
+**MacOS mcp配置文件格式 :**
 
+```
 {
   "mcpServers": {
     "sequential-thinking": {
@@ -58,9 +58,16 @@
         "@modelcontextprotocol/server-sequential-thinking"
       ]
     },
-  "puppeteer": {
+   "playwright": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+      "args": ["-y", "@executeautomation/playwright-mcp-server"]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
     }
   }
 }
@@ -68,9 +75,10 @@
 
 
 
-```
-# windows mcp配置文件格式
 
+**windows mcp配置文件格式 :**
+
+```
 {
   "mcpServers": {
     "sequential-thinking": {
@@ -82,23 +90,26 @@
         "@modelcontextprotocol/server-sequential-thinking"
       ]
     },
-  "puppeteer": {
+   "playwright": {
       "command": "cmd",
       "args": [
-        "/c",
-        "-y", 
-        "npx",
-        "@modelcontextprotocol/server-puppeteer"]
+      "/c",
+      "npx",
+        "-y",
+         "@executeautomation/playwright-mcp-server"]
+    },
+    "memory": {
+      "command": "cmd",
+      "args": [
+      "/c",
+      "npx",
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
     }
   }
 }
 ```
-
-
-
-
-
-
 
 
 
